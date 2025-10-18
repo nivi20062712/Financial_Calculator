@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+int main()
+{
+float inc,exp,sav;
+float mf,gd,eq,ut;
+int years;
+float vmf,vgd,veq,vut,vtotal;
+clrscr();
+printf("=====FINANCIAL PLAN CALCULATOR=====\n");
+printf("INCOME: ");
+scanf("%f",&inc);
+if(inc<=0)
+{
+printf("Enter your Correct Income");
+return 0;
+}
+exp=(inc * 60) / 100;
+sav=(inc * 40) / 100;
+printf("EXPENSES : %.2f\n",exp);
+printf("SAVINGS & INVESTMENTS : %.2f \n\n",sav);
+printf("=====IVESTMENT CALCULATOR=====\n");
+mf=(sav * 50) / 100;
+gd=(sav * 20) / 100;
+eq=(sav * 20) / 100;
+ut=(sav * 10) / 100;
+printf("MUTUAL FUNDS : %.2f\n",mf);
+printf("GOLD         : %.2f\n",gd);
+printf("EQUITY       : %.2f\n",eq);
+printf("US STOCKS    : %.2f\n",ut);
+
+printf("\n=====FUTURE VALUE CALCULATOR=====\n");
+printf("Enter the number of years: ");
+scanf("%d",&years);
+
+vmf=mf * pow((1 + 0.12),years);
+vgd=gd * pow((1 + 0.6),years);
+veq=eq * pow((1 + 0.15),years);
+vut=ut * pow((1 + 0.10),years);
+vtotal=vmf+vgd+veq+vut;
+
+printf("The value of Investment after %d years\n",years);
+printf("Mutual Funds: %.2f\n",vmf);
+printf("Gold        : %.2f\n",vgd);
+printf("Equity      : %.2f\n",veq);
+printf("US stocks   : %.2f\n",vut);
+printf("==============================\n");
+printf("The future vlaue is : %.2f",vtotal);
+printf("\n==============================\n");
+getch();
+return 0;
+}
