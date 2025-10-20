@@ -1,7 +1,7 @@
 Financial Calculator (Mini Project in C)
 
 Author
-Nivindharan A 
+Nivindharan A, 
 Department of Computer Science and Engineering
 
 🧾 Project Overview
